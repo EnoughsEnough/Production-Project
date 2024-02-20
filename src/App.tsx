@@ -9,7 +9,6 @@ import {useTheme} from "./theme/useTheme";
 const App = () => {
     const {theme, toogleTheme} = useTheme()
 
-
     return (
         <div className={`app ${theme}`}>
             <button onClick={toogleTheme}>TOGGLE</button>
