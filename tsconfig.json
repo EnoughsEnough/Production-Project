@@ -9,13 +9,19 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "types": ["node", "react"],
     "paths": {
-      "*": ["./src/*"],
+      "*": ["./src/*"]
     }
   },
+  "jsoncompilerOptions":  {
+    "strictNullChecks": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "build"],
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
     }
   }
 }
