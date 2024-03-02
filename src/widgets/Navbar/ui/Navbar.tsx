@@ -1,34 +1,34 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './Navbar.module.scss'
-import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { classNames } from 'shared/lib/classNames/classNames';
+import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
   className?: string
 }
 const Navbar = (props: NavbarProps) => {
-  const {
-    className
-  } = props
+    const {
+        className,
+    } = props;
 
-  return (
-      <div className={classNames(cls.Navbar, {}, [className])}>
-          <div className={cls.links}>
-              <AppLink
+    return (
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <div className={cls.links}>
+                <AppLink
                     theme={AppLinkTheme.SECONDARY}
-                    to={'/'}
+                    to="/"
                     className={cls.mainLink}
                 >
-                  Главная
-              </AppLink>
-              <AppLink
+                    Главная
+                </AppLink>
+                <AppLink
                     theme={AppLinkTheme.SECONDARY}
-                    to={'/about'}
+                    to="/about"
                 >
-                  О сайте
-              </AppLink>
-          </div>
-      </div>
-  )
-}
+                    О сайте
+                </AppLink>
+            </div>
+        </div>
+    );
+};
 
-export default Navbar
+export default Navbar;
